@@ -120,8 +120,7 @@ function enableSwipeToDelete(order, orderData) {
 
             setTimeout(() => {
                 order.remove();
-
-                // 🔥 remove from storage
+                
                 let orders = getOrders();
                 orders = orders.filter(o =>
                     !(
