@@ -40,6 +40,7 @@ function confirmationForm(drinkName) {
         html: `
             <label>Milch</label>
             <select id="milkSelect" class="swal2-input">
+                <option value="---">---</option>
                 <option value="Vollmilch">Vollmilch</option>
                 <option value="Laktosefrei">Laktosefrei</option>
                 <option value="Hafermilch">Hafermilch</option>
@@ -121,7 +122,6 @@ function enableSwipeToDelete(order, orderData) {
             setTimeout(() => {
                 order.remove();
 
-                // 🔥 remove from storage
                 let orders = getOrders();
                 orders = orders.filter(o =>
                     !(
